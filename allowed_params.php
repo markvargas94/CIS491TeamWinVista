@@ -3,8 +3,8 @@
 function allowed_get_params($allowed_params=[]) {
 	$allowed_array = [];
 	foreach($allowed_params as $param) {
-		if(isset($_GET[$param])) {
-			$allowed_array[$param] = $_GET[$param];
+		if(isset($_POST[$param])) {
+			$allowed_array[$param] = $_POST[$param];
 		} else {
 			$allowed_array[$param] = NULL;
 		}
@@ -12,10 +12,10 @@ function allowed_get_params($allowed_params=[]) {
 	return $allowed_array;
 }
 
-$get_params = allowed_get_params(['username', 'password']);
+// $get_params = allowed_get_params(['username', 'password']);
 
-var_dump($get_params);
+// var_dump($get_params);
 
-// http://localhost/~kevinskoglund/allowed_params.php?username=kskoglund&password=secret&logged_in=1
+// // http://localhost/~kevinskoglund/allowed_params.php?username=kskoglund&password=secret&logged_in=1
 
 ?>

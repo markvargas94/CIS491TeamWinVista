@@ -1,0 +1,19 @@
+{
+  "name": "bithereum-demo",
+  "version": "1.0.0",
+  "description": "Secure web app demonstration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markvargas94/CIS491TeamWinVista.git"
+  },
+  "author": "koluong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markvargas94/CIS491TeamWinVista/issues"
+  },
+  "homepage": "https://github.com/markvargas94/CIS491TeamWinVista#readme"
+}

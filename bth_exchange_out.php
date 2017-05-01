@@ -1,7 +1,7 @@
 <?php 
 
-require_once('validation_functions.php');
-require_once('allowed_params.php');
+require_once('security/validation_functions.php');
+require_once('security/allowed_params.php');
 $valid_confirm = false;
 $parts = explode('@', $_POST['email']);
 

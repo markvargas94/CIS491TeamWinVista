@@ -3,10 +3,80 @@
     <head>
         <title>Bithereum | Trading Today</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
-        <p>Bithereum Trading</p>
+        <div class="container">
+            <div class="row">
+            <div class="col-xs-12">
+                <h1>Bithereum Trading</h1>
+            </div>
+            </div>
+            <hr>
+            <div id="form">
+                <!-- START Submission Form -->
+                <form action="bth_exchange_out.php" method="POST">
+                    <div class="form-heading">
+                        <h2>Send Bithereum</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" class="form-control" placeholder="John Miller">
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" class="form-control" placeholder="jmiller@bth.com">
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="form-group">
+                                <label for="pincode">Pin Code</label>
+                                <input type="text" name="pincode" class="form-control" style="width:58px" maxlength="4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <div class="form-group">
+                                <label for="receiverName">Name of Recipient</label>
+                                <input type="text" name="receiverName" class="form-control" placeholder="Team Windows Vista">
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="form-group">
+                                <label for="receiver">Recipient's Routing ID</label>
+                                <input type="text" name="receiver" class="form-control" placeholder="" style="width:100px" maxlength="9"> 
+                            </div>                       
+                        </div>     
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label for="amount">Amount</label>
+                                <input type="text" name="amount" class="form-control" style="width:250px"> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-8">
+                             <label for="description">Description</label>
+                            <textarea name="description" rows="5" cols="1" class="form-control" placeholder="Additional notes for recipient"></textarea> 
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button type="submit" class="btn btn-success">Send</button>
+                        </div>
+                    </div>
+                </form>
+                <!-- END Submission Form -->
+            </div>
+        </div>
     </body>
 </html>      

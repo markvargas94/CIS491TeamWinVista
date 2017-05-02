@@ -1,6 +1,6 @@
 <?php
 
-function allowed_get_params($allowed_params=[]) {
+function allowed_post_params($allowed_params=[]) {
 	$allowed_array = [];
 	foreach($allowed_params as $param) {
 		if(isset($_POST[$param])) {
@@ -11,11 +11,5 @@ function allowed_get_params($allowed_params=[]) {
 	}
 	return $allowed_array;
 }
-
-// $get_params = allowed_get_params(['username', 'password']);
-
-// var_dump($get_params);
-
-// // http://localhost/~kevinskoglund/allowed_params.php?username=kskoglund&password=secret&logged_in=1
 
 ?>

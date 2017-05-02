@@ -26,14 +26,14 @@ if ($_SERVER ['REQUEST_METHOD'] === 'POST') {
         is_numeric($_POST['amount']) ? $_POST['amount'] : "Invalid Amount!"
     ) : "Invalid Amount!";
 
-    if (strpos($name, 'Invalid') !== false ) {
+    if (strpos($name, 'Invalid') !== false || strpos($phone, 'Invalid' || strpos($email, 'Invalid') || strpos($recipient, 'Invalid')) !== false) {
         $valid_confirm = false;
     }
 
     if (!$valid_confirm) {
         $confirm_header = 'Invalid Respone, Please Try Again';
     } elseif ($valid_confirm) {
-        $confirm_header = 'Send Confirmation';
+        $confirm_header = 'Success | Send Confirmation';
     }
 }
 

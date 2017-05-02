@@ -2,10 +2,13 @@
 
 require_once('security/validation_functions.php');
 require_once('security/allowed_params.php');
-$valid_confirm = false;
+
+$valid_confirm = true;
 $parts = explode('@', $_POST['email']);
+$post_params = allowed_post_params(['name', 'phone', 'email', 'receiverName', 'amount']);
 
 if ($_SERVER ['REQUEST_METHOD'] === 'POST') {
+    var_dump($post_params);
 
     $name = has_presence($_POST['name']) ? $_POST['name'] : "Invalid Name!";
 
@@ -22,7 +25,18 @@ if ($_SERVER ['REQUEST_METHOD'] === 'POST') {
     $amount = has_presence($_POST['amount']) ? (
         is_numeric($_POST['amount']) ? $_POST['amount'] : "Invalid Amount!"
     ) : "Invalid Amount!";
+
+    if (strpos($name, 'Invalid') !== false ) {
+        $valid_confirm = false;
+    }
+
+    if (!$valid_confirm) {
+        $confirm_header = 'Invalid Respone, Please Try Again';
+    } elseif ($valid_confirm) {
+        $confirm_header = 'Send Confirmation';
+    }
 }
+
 
 ?>
 
@@ -36,7 +50,7 @@ if ($_SERVER ['REQUEST_METHOD'] === 'POST') {
     </head>
     <body>
         <div class="container">
-            <h1>Send Confirmation</h1>
+            <h1> <?php echo $confirm_header; ?> </h1>
             <hr>
                 <h4>Name: <?php echo $name; ?> </h4>
                 <h4>Email: <?php echo $email; ?> </h4>

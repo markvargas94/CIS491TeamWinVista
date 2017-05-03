@@ -58,7 +58,8 @@ if ($_SERVER ['REQUEST_METHOD'] === 'POST') {
                 <h4>Phone: <?php echo $phone; ?> </h4>
                 <h4>Recipient: <?php echo $recipient; ?> </h4>
                 <h4>Amount: <?php echo $amount; ?> </h4>
-                <a href="index.html" class="btn btn-danger" role="button">Send Again</a>
+                <a href="index.html" class="btn btn-success" role="button">Send Again</a>
+                <a href="index.html" class="btn btn-danger" role="button">Confirm Send</a>
                 <a href="#" class="btn btn-primary btn-primary" role="button">Dashboard</a>
             </div>
     </body>

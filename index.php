@@ -86,7 +86,7 @@ require_once('security/csrf_token_functions.php');
                         </div>
                     </div>
                     <!-- CSRF Token is created here -->
-                    <?php //echo csrf_token_tag(); ?>
+                    <?php echo csrf_token_tag(); ?>
                 </form>
                 <!-- END Submission Form -->
             </div>
